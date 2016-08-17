@@ -58,3 +58,32 @@ Simple mixins that can help make an easy BEM structure and avoid typos. (Used on
     }
 }
 ```
+
+## Using Bootstrap Grid mixins
+With npm module [boostrap-sass](https://github.com/twbs/bootstrap-sass), use mixin to custom CSS classes instead of the default Bootstrap CSS classes.
+
+```css
+@include container-fixed($gutter: $grid-gutter-width);
+
+@include make-row($gutter: $grid-gutter-width);
+
+@include make-xs-column($columns, $gutter: $grid-gutter-width);
+@include make-xs-column-offset($columns);
+@include make-xs-column-push($columns);
+@include make-xs-column-pull($columns);
+
+@include make-sm-column($columns, $gutter: $grid-gutter-width);
+@include make-sm-column-offset($columns);
+@include make-sm-column-push($columns);
+@include make-sm-column-pull($columns);
+
+@include make-md-column($columns, $gutter: $grid-gutter-width);
+@include make-md-column-offset($columns);
+@include make-md-column-push($columns);
+@include make-md-column-pull($columns);
+
+@include make-lg-column($columns, $gutter: $grid-gutter-width);
+@include make-lg-column-offset($columns);
+@include make-lg-column-push($columns);
+@include make-lg-column-pull($columns);
+```

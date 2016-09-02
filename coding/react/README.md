@@ -3,6 +3,7 @@
 ## Concatenate JSX objects
 
 Pushing in an array.
+*DEPRECATED, use an array map*
 
 ```javascript
 let returnValue = [];

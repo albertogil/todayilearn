@@ -22,3 +22,24 @@ let styleConfig = { width: ((100 / 3) + '%'), backgroundColor : 'red' };
 
 return (<div  style={ styleConfig }>Box Content</div>);
 ```
+
+## Passing arguments in JSX props functions
+
+To pass arguments to the function onClick like:
+
+```html
+return (<button onClick={this.sayhi} />);
+```
+
+You need to bind the parameters to the function, and with lint you cound bind it before assigning it.
+
+```javascript
+clickMethod (message) {
+  console.log(`Github todayilearn - ${message}`);
+}
+
+// ...
+
+let clickMethod = this.sayhi.bind(this, 'parameter for hi');
+return (<button onClick={clickMethod} />);
+```

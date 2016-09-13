@@ -16,6 +16,12 @@ And to recover the changes, you type:
 $ git stash pop
 ```
 
+Clear stash:
+
+```
+$ git stash clear
+```
+
 ## Create subfolders of branchs
 
 By typing **/** in the branch name will create a subfolder on the git branching. Example:

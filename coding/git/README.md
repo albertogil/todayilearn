@@ -29,3 +29,11 @@ By typing **/** in the branch name will create a subfolder on the git branching.
 ```
 $ git checkout -b feature/login-CODE-123
 ```
+
+## Rollback from a wrong commit
+
+Will undo the commit and keep the changes.
+
+```
+$ git reset HEAD~ 
+```

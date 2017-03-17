@@ -43,3 +43,12 @@ clickMethod (message) {
 let clickMethod = this.sayhi.bind(this, 'parameter for hi');
 return (<button onClick={clickMethod} />);
 ```
+
+## Handle SVG Icons
+
+Load the selection.json generated from icomoon and get the specific path looking the id in the array.
+
+Or create an array of constants, each with the specifici path of the icon.
+
+[More info](https://medium.com/@david.gilbertson/icons-as-react-components-de3e33cb8792#.94idpw6dp)
+

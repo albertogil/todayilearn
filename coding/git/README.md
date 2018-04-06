@@ -37,3 +37,31 @@ Will undo the commit and keep the changes.
 ```
 $ git reset HEAD~ 
 ```
+
+## Adding pre commit hooks
+
+Install package [pre-commit](https://www.npmjs.com/package/precommit) on dev dependencies.
+
+```
+$ npm install pre-commit --save-dev
+```
+
+Add a new script to run by pre-commit in the package.json, like:
+
+```
+...
+  "scripts": {
+    "lint:diff": "LIST=`git diff-index --name-only HEAD | grep .*\\.js | grep -v json`; if [ \"$LIST\" ]; then eslint $LIST; fi",
+    ...
+  },
+...
+```
+Add the pre-commit script on the package.json :
+```
+"pre-commit": [
+  "lint:diff"
+]
+```
+More info:
+- [Git Hook](https://githooks.com/)
+- [ESLINT Script](https://gist.github.com/oroce/11282380) and [another option](https://gist.github.com/dahjelle/8ddedf0aebd488208a9a7c829f19b9e8)
